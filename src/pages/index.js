@@ -6,45 +6,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import * as indexStyles from "./index.module.css"
 
+import QuestionSwiper from "../components/question-swiper"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="ICPDAO Home" />
 
-    <div className={indexStyles.swipper}>
-      <div className={indexStyles.swipperBody}>
-        <div 
-          style={{
-            fontSize: 100,
-            lineHeight: "118px",
-            marginBottom: 50
-          }}
-        >How to start a business with no money?
-        </div>
-        <StaticImage
-          src="../images/coin.png"
-          width={551}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="coin"
-        />
-        <div 
-          style={{
-            marginTop: 50,
-            fontSize: 55
-          }}
-        >Listed First，Then Business</div>
-        <div 
-          style={{
-            textAlign: 'center',
-            marginTop: 50,
-            fontSize: 28,
-            maxWidth: 812,
-            color: "#E8E9EA"
-          }}
-        >Publish your white paper and token, and openly recruit talent and funding to the entire network.</div>
-      </div>
-
-    </div>
+    <QuestionSwiper></QuestionSwiper>
 
     <div className={indexStyles.info}>
       <div

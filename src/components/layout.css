@@ -35,6 +35,12 @@ body {
   }
 }
 
+#gatsby-focus-wrapper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 20px;
+  height: 20px;
+  background-color: #48587C;
+}
+
 article,
 aside,
 details,

@@ -1,20 +1,3 @@
-.swipper{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1160px;
-    text-align: center;
-}
-
-.swipper-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .info{
     margin-top: 100px;
     display: flex;
