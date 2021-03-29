@@ -1,0 +1,79 @@
+.swipper{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1160px;
+    text-align: center;
+}
+
+.swipper-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-list{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info{
+    margin: 0 5px;
+    background-color: #080C13;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 307px;
+    height: 307px;
+}
+
+.contact-info-icon{
+    margin-top: 50px;
+}
+
+.contact-info-name{
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.contact-info-desc{
+    margin-top: 20px;
+    width: 200px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.twitter{
+    color: #2994DA;
+}
+
+.discord{
+    color: #7289DA;
+}
+
+.gmail{
+    color: #ffffff;
+}
+
+.youtube{
+    color: #FD3832;
+}
+
+.contact-info-link{
+    text-decoration: none;
+}

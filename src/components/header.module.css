@@ -1,0 +1,23 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  z-index: 3;
+  position: sticky;
+  top: -1px;
+  background: #0f1013;
+  border-bottom: 1px solid #292C2F;
+  transition: background-color 0.25s ease;
+  @media (max-width: 960px) {
+    padding: 1.5rem 2rem;
+    height: '100vh';
+  }
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
