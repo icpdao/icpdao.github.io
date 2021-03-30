@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { StaticImage } from "gatsby-plugin-image"
 
 import QuestionSwiperSlideContent from "./question-swiper-slide-content"
+import YoutubeVideo from "./youtube-video"
 
 require('swiper/swiper.scss')
 require('swiper/components/navigation/navigation.scss')
@@ -52,13 +53,7 @@ const QuestionSwiper = () => {
         <QuestionSwiperSlideContent
           titleText="How to manege without experience?"
           desc={
-            <StaticImage
-              src="../images/video.png"
-              width={724}
-              quality={95}
-              formats={["AUTO", "WEBP", "AVIF"]}
-              alt="coin"
-            />
+            <YoutubeVideo videoId="2g811Eo7K8U" />
           }
           subTitleText="Do nothing"
           subDescText="Power shared by all, decision by common consensus, and action driven by “token”."
