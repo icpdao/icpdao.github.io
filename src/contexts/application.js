@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useReducer, useMemo, useCallback, useEffect } from 'react'
+import React, { createContext, useContext, useReducer, useMemo, useCallback } from 'react'
 
-const UPDATE_DARKMODE = 'UPDATE_DARKMODE'
+const ACTIONS = {
+  UPDATE_DARKMODE: 'UPDATE_DARKMODE'
+}
 
 const DARKMODE_KEY = 'DARKMODE_KEY'
 
@@ -10,7 +12,7 @@ const DARK_MODE_OPTION = {
 }
 
 const INITIAL_STATE = {
-  [DARKMODE_KEY]: DARK_MODE_OPTION.LIGHT
+  [DARKMODE_KEY]: DARK_MODE_OPTION.DARK
 }
 
 const ApplicationContext = createContext({})
@@ -21,7 +23,7 @@ function useApplicationContext() {
 
 function reducer(state, { type, payload }) {
   switch (type) {
-    case UPDATE_DARKMODE: {
+    case ACTIONS.UPDATE_DARKMODE: {
       const { mode } = payload
       return {
         ...state,
@@ -35,17 +37,17 @@ function reducer(state, { type, payload }) {
   }
 }
 
-export default function Provider({ children }) {
+export default function ApplicationContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE)
 
-  const updateDarkMode = useCallback(mode => {
+  const updateDarkMode = useCallback((mode) => {
     dispatch({
-      type: UPDATE_DARKMODE,
+      type: ACTIONS.UPDATE_DARKMODE,
       payload: {
         mode
       }
     })
-  }, [])
+  }, [state])
 
   return (
     <ApplicationContext.Provider value={useMemo(() => [state, { updateDarkMode }], [state, updateDarkMode])}>
@@ -54,35 +56,16 @@ export default function Provider({ children }) {
   )
 }
 
-export function Updater() {
-  const [, { updateDarkMode }] = useApplicationContext()
-  useEffect(() => {
-    const root = window.document.documentElement
-    const initialColorValue = root.style.getPropertyValue('--initial-color-mode')
-    if (initialColorValue === 'dark') {
-      updateDarkMode(DARK_MODE_OPTION.DARK)
-    } else {
-      updateDarkMode(DARK_MODE_OPTION.DARK.LIGHT)
-    }
-  }, [])
-  return null
-}
-
 export function useDarkMode() {
-  let context = useApplicationContext()
-  const state = context[0]
-  const updateDarkMode = context[1].updateDarkMode
-  // const [state, { updateDarkMode }] = useApplicationContext()
+  const [state, { updateDarkMode }] = useApplicationContext()
 
   const darkModeOn = state?.[DARKMODE_KEY] === DARK_MODE_OPTION.DARK
 
   function toggleDarkMode() {
     if (darkModeOn) {
       updateDarkMode(DARK_MODE_OPTION.LIGHT)
-      localStorage.setItem('color-mode', 'light')
     } else {
       updateDarkMode(DARK_MODE_OPTION.DARK)
-      localStorage.setItem('color-mode', 'dark')
     }
   }
 
