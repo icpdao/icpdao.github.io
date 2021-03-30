@@ -47,7 +47,7 @@ export default function ApplicationContextProvider({ children }) {
         mode
       }
     })
-  }, [state])
+  }, [])
 
   return (
     <ApplicationContext.Provider value={useMemo(() => [state, { updateDarkMode }], [state, updateDarkMode])}>
