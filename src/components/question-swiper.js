@@ -7,18 +7,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import QuestionSwiperSlideContent from "./question-swiper-slide-content"
 
-const swiperStyle = require('swiper/swiper.scss')
-const swiperStyle2 = require('swiper/components/navigation/navigation.scss')
-const swiperStyle3 = require('swiper/components/pagination/pagination.scss')
-const swiperStyle4 = require('swiper/components/scrollbar/scrollbar.scss')
-// import 'swiper/components/navigation/navigation.scss'
-// import 'swiper/components/pagination/pagination.scss'
-// import 'swiper/components/scrollbar/scrollbar.scss'
+require('swiper/swiper.scss')
+require('swiper/components/navigation/navigation.scss')
+require('swiper/components/pagination/pagination.scss')
+require('swiper/components/scrollbar/scrollbar.scss')
 
 SwiperCore.use([Navigation, Pagination, A11y])
 
 
-export default () => {
+const QuestionSwiper = () => {
   return (
     <Swiper
       style={{
@@ -90,3 +87,5 @@ export default () => {
     </Swiper>
   );
 };
+
+export default QuestionSwiper

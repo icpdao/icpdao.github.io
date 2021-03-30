@@ -1,6 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
-export default (props) => {
+const StyledSubDesc = styled.header`
+  text-align: center;
+  margin-top: 50px;
+  font-size: 28px;
+  max-width: 812px;
+  color: ${props => props.theme.greyTextColor};
+`
+
+const Content = (props) => {
   return (
     <div
       style={{
@@ -25,15 +34,9 @@ export default (props) => {
           fontSize: 55
         }}
       >{props.subTitleText}</div>
-      <div 
-        style={{
-          textAlign: 'center',
-          marginTop: 50,
-          fontSize: 28,
-          maxWidth: 812,
-          color: "#E8E9EA"
-        }}
-      >{props.subDescText}</div>
+      <StyledSubDesc>{props.subDescText}</StyledSubDesc>
     </div>
   );
 };
+
+export default Content
