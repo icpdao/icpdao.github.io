@@ -53,7 +53,7 @@ const QuestionSwiper = () => {
         <QuestionSwiperSlideContent
           titleText="How to manege without experience?"
           desc={
-            <YoutubeVideo videoId="2g811Eo7K8U" />
+            <YoutubeVideo videoId="i7FSv9tIhqs" />
           }
           subTitleText="Do nothing"
           subDescText="Power shared by all, decision by common consensus, and action driven by “token”."

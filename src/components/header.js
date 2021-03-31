@@ -57,8 +57,8 @@ const Header = () => {
           alignItems: "center"
         }}>
         <StaticImage
-          src="../images/gatsby-icon.png"
-          width={32}
+          src="../images/icon.png"
+          width={48}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="logo"
@@ -67,8 +67,8 @@ const Header = () => {
           style={{
             marginLeft: 10
           }}
-          src="../images/icpdao.png"
-          height={18}
+          src="../images/logo.png"
+          height={30}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="icpdao"
