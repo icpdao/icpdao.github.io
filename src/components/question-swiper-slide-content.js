@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const StyledSubDesc = styled.header`
   text-align: center;
-  margin-top: 50px;
-  font-size: 28px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
   max-width: 812px;
   color: ${props => props.theme.greyTextColor};
 `
@@ -22,16 +22,16 @@ const Content = (props) => {
       <div
         style={{
           textAlign: "center",
-          fontSize: 100,
-          lineHeight: "118px",
-          marginBottom: 50
+          fontSize: "4rem",
+          lineHeight: "5rem",
+          marginBottom: "2rem"
         }}
       >{props.titleText}</div>
       {props.desc}
       <div 
         style={{
-          marginTop: 50,
-          fontSize: 55
+          marginTop: "2rem",
+          fontSize: "3rem"
         }}
       >{props.subTitleText}</div>
       <StyledSubDesc>{props.subDescText}</StyledSubDesc>

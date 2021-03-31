@@ -8,7 +8,7 @@ import QuestionSwiper from "../components/question-swiper"
 import Contact from "../components/contact"
 
 const StyledDevDesc = styled.div`
-  font-size: 28px;
+  font-size: 1.5rem;
   max-width: 960px;
   color: ${props => props.theme.greyTextColor};
   text-align: center;
@@ -30,9 +30,8 @@ const IndexPage = () => (
       }}>
       <div
         style={{
-          marginTop: 50,
-          fontSize: 64,
-          fontFamily: "PingFang SC Regular"
+          marginTop: "3rem",
+          fontSize: "4rem"
         }}
       >We are developing...</div>
 

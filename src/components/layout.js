@@ -36,7 +36,6 @@ align-items: flex-end;
 height: 12rem;
 padding-bottom: 2rem;
 color: ${props => props.theme.textColor};
-font-family: 'GT Haptik Regular';
 
 @media (max-width: 1155px) {
   display: block;

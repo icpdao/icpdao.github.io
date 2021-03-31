@@ -58,7 +58,7 @@ const Header = () => {
         }}>
         <StaticImage
           src="../images/icon.png"
-          width={48}
+          width={45}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="logo"
@@ -68,7 +68,7 @@ const Header = () => {
             marginLeft: 10
           }}
           src="../images/logo.png"
-          height={30}
+          height={25}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="icpdao"

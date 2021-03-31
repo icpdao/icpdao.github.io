@@ -20,8 +20,8 @@ const QuestionSwiper = () => {
   return (
     <Swiper
       style={{
-        paddingBottom: 50,
-        marginTop: 100,
+        paddingBottom: "4rem",
+        marginTop: "2rem",
         maxWidth: 1160
       }}
       spaceBetween={50}
@@ -37,7 +37,7 @@ const QuestionSwiper = () => {
           desc={
             <StaticImage
               src="../images/coin.png"
-              width={551}
+              width={451}
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="coin"
@@ -53,7 +53,9 @@ const QuestionSwiper = () => {
         <QuestionSwiperSlideContent
           titleText="How to manege without experience?"
           desc={
-            <YoutubeVideo videoId="i7FSv9tIhqs" />
+            <div style={{marginBottom: "-2rem"}}>
+              <YoutubeVideo videoId="i7FSv9tIhqs" />
+            </div>
           }
           subTitleText="Do nothing"
           subDescText="Power shared by all, decision by common consensus, and action driven by “token”."

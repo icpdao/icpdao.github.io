@@ -6,7 +6,7 @@ import * as contactStyles from "./contact.module.css"
 
 
 const StyledContactList = styled.div`
-    margin-top: 100px;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,13 +21,15 @@ const StyledContactInfo = styled.div`
     border-radius: 17px;
     box-shadow: ${({ theme }) => theme.shadows.huge};
     margin: 0 5px;
+    padding: 1rem;
+    padding-top: 2.5rem;
     background-color: ${ props => props.theme.cardBG};
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 307px;
-    height: 307px;
+    width: 220px;
+    height: 270px;
     color: ${ props => {
         if (props.name === 'twitter') {
             return "#2994DA"
@@ -45,17 +47,15 @@ const StyledContactInfo = styled.div`
 `
 
 const StyledContactInfoName = styled.div`
-    margin-top: 30px;
-    font-size: 24px;
-    font-family: "PingFang SC Regular";
+    margin-top: 1rem;
+    font-size: 1.3rem;
 `
 
 const StyledContactInfoDesc = styled.div`
-    margin-top: 20px;
+    margin-top: 1rem;
     width: 200px;
-    font-size: 16px;
+    font-size: 0.9rem;
     text-align: center;
-    font-family: "PingFang SC Regular";
 `
 
 const Contact = () => (

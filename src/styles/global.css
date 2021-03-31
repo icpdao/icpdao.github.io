@@ -574,3 +574,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('/fonts/Lucida-Grande.ttf');
+}
