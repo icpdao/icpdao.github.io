@@ -14,31 +14,33 @@ const StyledDevDesc = styled.div`
   text-align: center;
 `
 
+const StyledDevTitle = styled.div`
+  font-size: 4rem;
+`
+
+const StyledDev = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-top: 1px solid ${({ theme }) => theme.borderColor};
+  padding-top: 6rem;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="ICPDAO Home" />
 
     <QuestionSwiper></QuestionSwiper>
 
-    <div 
-      style={{
-        MarginTop: 100,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <div
-        style={{
-          marginTop: "3rem",
-          fontSize: "4rem"
-        }}
-      >We are developing...</div>
-
+    <StyledDev>
+      <StyledDevTitle>We are developing...</StyledDevTitle>
       <StyledDevDesc>Learn more about ICPDAO, chat with the team, others in the community, and have your say in shaping the future of the ICPDAO protocol.</StyledDevDesc>
 
       <Contact></Contact>
-    </div>
+    </StyledDev>
 
   </Layout>
 )

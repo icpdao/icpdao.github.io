@@ -66,9 +66,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #gatsby-focus-wrapper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.9rem;
     background-color: #48587C;
+    opacity: 1;
+  }
+  #gatsby-focus-wrapper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: #91ABE8;
+    opacity: 1;
   }
   
   #gatsby-focus-wrapper{

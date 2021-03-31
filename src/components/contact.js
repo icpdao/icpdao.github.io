@@ -28,8 +28,8 @@ const StyledContactInfo = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 220px;
-    height: 270px;
+    width: 240px;
+    height: 240px;
     color: ${ props => {
         if (props.name === 'twitter') {
             return "#2994DA"
@@ -48,7 +48,7 @@ const StyledContactInfo = styled.div`
 
 const StyledContactInfoName = styled.div`
     margin-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 `
 
 const StyledContactInfoDesc = styled.div`
@@ -67,7 +67,7 @@ const Contact = () => (
                 <StaticImage
                     className={contactStyles.contactInfoIcon}
                     src="../images/twitter.png"
-                    width={82}
+                    width={60}
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="twitter"
@@ -82,7 +82,7 @@ const Contact = () => (
             <StaticImage
                 className={contactStyles.contactInfoIcon}
                 src="../images/discord.png"
-                width={82}
+                width={60}
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Discord"
@@ -97,7 +97,7 @@ const Contact = () => (
             <StaticImage
                 className={contactStyles.contactInfoIcon}
                 src="../images/gmail.png"
-                width={82}
+                width={60}
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Gmail"
@@ -112,7 +112,7 @@ const Contact = () => (
                 <StaticImage
                     className={contactStyles.contactInfoIcon}
                     src="../images/youtube.png"
-                    width={82}
+                    width={60}
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="Youtube"

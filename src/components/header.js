@@ -1,9 +1,10 @@
-import * as React from "react"
+import React, { useState } from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import { Sun, Moon } from 'react-feather'
 import styled from 'styled-components'
 
 import { useDarkMode } from '../contexts/application'
+import useDocumentScrollThrottled from '../utils/useDocumentScrollThrottled'
 
 const StyledHeader = styled.header`
   display: flex;
@@ -16,8 +17,8 @@ const StyledHeader = styled.header`
   z-index: 3;
   position: sticky;
   top: -1px;
-  background: ${props => props.theme.backgroundColor};
-  border-bottom: 1px solid ${props => props.theme.backgroundColor};
+  background: ${({ theme, headerBG }) => (headerBG ? theme.backgroundColor : 'none')};
+  border-bottom: 1px solid ${({ theme, headerBG }) => headerBG ? theme.backgroundColor : 'none'};
   transition: background-color 0.25s ease;
   @media (max-width: 960px) {
     padding: 1.5rem 2rem;
@@ -48,8 +49,15 @@ const Header = () => {
 
   const [darkMode, toggleDarkMode] = useDarkMode()
 
+  const [headerBG, setHeaderBG] = useState(false)
+
+  useDocumentScrollThrottled(callbackData => {
+    const { currentScrollTop } = callbackData
+    setHeaderBG(currentScrollTop > 2)
+  })
+
   return (
-    <StyledHeader>
+    <StyledHeader headerBG={headerBG}>
 
       <div 
         style={{
