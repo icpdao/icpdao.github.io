@@ -77,7 +77,7 @@ const Contact = () => (
             </StyledContactInfo>
         </StyledContactInfoLink>
 
-        <StyledContactInfoLink href="https://discord.gg/9eEdnRm6" target="_blank">
+        <StyledContactInfoLink href="https://discord.gg/yz7AWVdRmj" target="_blank">
             <StyledContactInfo name="discord">
             <StaticImage
                 className={contactStyles.contactInfoIcon}
